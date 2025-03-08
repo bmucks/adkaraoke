@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  height:100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.songgrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 10px; /* Space between the cards */
+  justify-items: center; /* Center items horizontally */
+  width: 70%; /* Adjusted width to fit within the container */
+  border: 2px solid gray;
+  border-width: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.songcard {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Align items to the center */
+  padding: 3px;
+  margin: 5px auto;
+  height: 95%; /* 30% smaller than the original 95% */
+  width: 71.1%; /* 30% smaller than the original 73% */
+  background-color: #022533;
+  color: rgb(253, 244, 231);
+  font-size: 0.49EM;
+  border: 2px solid gray;
+  border-radius: 8px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, width 0.5s ease; /* Slower transition */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.songcard-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center items horizontally */
+  width: 100%;
+}
+
+.song-number {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.delete-button {
+  cursor: pointer;
+  font-size: 1.99em;
+  color: red;
+  margin-bottom: 1px;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 60PX;
+  color: #087deb;
+  padding: 1PX;
+  font-weight: bolder;
+}
+
+.copy-button {
+  cursor: pointer;
+  font-size: 12px;
+  color: #ff9800;
+  margin-left: 5px;
+  border: none;
+  background: none;
+}
+
+.copy-button.copied {
+  color: red;
+}
+
+.textbox-container {
+  width: 25%; /* Adjusted width to fit within the container */
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+textarea {
+  width: 200px; /* Adjusted width to fit within the container */
+  padding: 4px;
+  background-color: #022533;
+  color: rgb(253, 244, 231);
+  height: 15px;
+}
+
+.adminBut {
+  width: 180px; /* Adjusted width to fit within the container */
+  padding: 41px;
+  background-color: #022533;
+  color: rgb(253, 244, 231);
+  margin-bottom: 15PX;
+  display: flex;
+  align-items: center;
+  margin-left: 30%;
+  justify-content: center; /* Center items horizontally */
+}
+
+.toggleOrder {
+  width: 180px; /* Adjusted width to fit within the container */
+  padding: 10px;
+  background-color: #022533;
+  color: rgb(253, 244, 231);
+  margin-bottom: 15PX;
+  display: flex;
+  align-items: center;
+  margin-left: 30%;
+  justify-content: center; /* Center items horizontally */
+}
+body{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+textarea.djnotes {
+width:330px;
+height: 20px;
+padding:2px;
+};
+input[type=checkbox] {
+  margin: 4px 0 0;
+  line-height: normal;
+  width: 20px;
+  height: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+textarea.sidenote {
+  width: 200px; /* Adjusted width to fit within the container */
+  padding: 41px;
+  display:flex;
+  background-color: #022533;
+  height: 1200px;
+  color: rgb(253, 244, 231);
+  top: 1111px;
 }
