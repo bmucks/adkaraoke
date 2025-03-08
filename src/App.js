@@ -106,7 +106,7 @@ function App() {
         items.push(doc.data());
       });
       setSongs(items);
-      setOriginalSongs(items);
+      setOriginalSongs(items) ;
     });
   }
 
