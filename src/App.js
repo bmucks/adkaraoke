@@ -154,7 +154,7 @@ function App() {
         <img height="300px" src="https://i.gifer.com/6fLK.gif" alt="new" />
         <br></br> 
         <button className="adminBut" type="reset" defaultValue="Reset" onClick={() => adminP()} >
-          A-Googily-Doogily...
+          A-Googily-Doogily
         </button>
       
         <div className="container">
